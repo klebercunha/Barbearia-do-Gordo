@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-gold-50: #FCFAF2;
+  --color-gold-100: #F7F1DF;
+  --color-gold-200: #EEDEBE;
+  --color-gold-300: #D9C394;
+  --color-gold-400: #C5A880;
+  --color-gold-500: #D4AF37; /* Dourado Clássico */
+  --color-gold-600: #B28F27;
+  --color-gold-700: #8C6F1E;
+  --color-gold-800: #5C4811;
+  --color-gold-900: #332707;
+  
+  --color-matte-950: #0D0D0D; /* Bento Page Background */
+  --color-matte-900: #161616; /* Bento Card Background */
+  --color-matte-850: #222222; /* Bento Intermediate Dark */
+  --color-matte-800: #2A2A2A; /* Bento Card Border */
+  --color-matte-700: #3A3A3A; /* Bento Gray Header/Inner border */
+  --color-matte-600: #4B4B52;
+  --color-matte-500: #6B6B72;
+}
+
+/* Base custom styles to support high-fidelity styling */
+body {
+  font-family: var(--font-sans);
+  background-color: #0D0D0D;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-title {
+  font-family: var(--font-display);
+}
+
+.serif-font {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+/* Elegant scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Bento Card Hover and Pulse */
+.bento-card-transition {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-card-transition:hover {
+  border-color: #D4AF37;
+}
+
+/* Pulse glow for gold elements */
+@keyframes goldGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
+  }
+}
+
+.gold-glow {
+  animation: goldGlow 3s infinite;
+}
+

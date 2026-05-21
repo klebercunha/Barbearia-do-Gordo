@@ -1,0 +1,6 @@
+{
+  "name": "Barbearia do Gordo",
+  "description": "Aplicativo premium para agendamento online, área do cliente e painel administrativo da Barbearia do Gordo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
